@@ -64,7 +64,6 @@ int main(int argc, char **argv){
     root->addChild(new SoDirectionalLight);
     root->addChild(waterMolecule);
     
-    
     // Set up viewer:
     SoQtExaminerViewer *myViewer = new SoQtExaminerViewer(mainwin);
     myViewer->setSceneGraph(root);

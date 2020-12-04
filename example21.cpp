@@ -5,6 +5,7 @@
 #include <Inventor/nodes/SoMaterial.h>
 #include <Inventor/nodes/SoPerspectiveCamera.h>
 #include <Inventor/nodes/SoSeparator.h>
+#include <Inventor/actions/SoWriteAction.h>
 
 int main(int argc, char **argv){
     QWidget * mainwin = SoQt::init(argc, argv, argv[0]);
@@ -18,6 +19,9 @@ int main(int argc, char **argv){
     myMaterial->diffuseColor.setValue(1.0, 0.0, 0.0);
     root->addChild(myMaterial);
     root->addChild(new SoCone);
+
+    SoWriteAction writeAction;
+    writeAction.apply(root); //writes the entire scene graph to stdout
 
     // Create a renderArea in which to see our scene graph.
     // The render area will appear within the main window.

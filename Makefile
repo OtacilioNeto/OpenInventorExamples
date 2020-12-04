@@ -6,12 +6,18 @@ INC=-I/usr/include/Inventor \
 
 LDFLAGS=-lSoQt -lCoin -lQt5Core -L/usr/lib/x86_64-linux-gnu
 
-EXE=hello ex02cppvsiv ex03cppvsiv example21 example22 example23 example24 example31
+EXE=hello ex02cppvsiv ex03cppvsiv example21 example22 example23 \
+	example24 example31 example56
 
 all: $(EXE)
 
+example56: example56.o
+	g++ -o $@ $? $(LDFLAGS)	
+example56.o: example56.cpp
+	$(CPP) $(CFLAGS) $(INC) -c -o $@ $?
+
 example31: example31.o
-	g++ -o $@ $? $(LDFLAGS)
+	g++ -o $@ $? $(LDFLAGS)	
 example31.o: example31.cpp
 	$(CPP) $(CFLAGS) $(INC) -c -o $@ $?
 

@@ -1,0 +1,13 @@
+#Inventor V2.1 ascii
+
+
+Separator {
+
+  Material {
+    diffuseColor 1 0 0
+
+  }
+  Cone {
+
+  }
+}
