@@ -35,8 +35,8 @@ int main(int argc, char **argv){
     root->addChild(rightSep);
 
     // Fill in the values.
-    leftTranslation->translation.setValue(1.0, 0.0, 0.0);
-    rightTranslation->translation.setValue(1.0, 0.0, 0.0);
+    leftTranslation->translation.setValue(  5.0, 0.0, 0.0);
+    rightTranslation->translation.setValue(-5.0, 0.0, 0.0);
     myRotation->angle = M_PI/2;
     myRotation->axis  = SoRotationXYZ::X;
     myScale->scaleFactor.setValue(2.0, 1.0, 3.0);
